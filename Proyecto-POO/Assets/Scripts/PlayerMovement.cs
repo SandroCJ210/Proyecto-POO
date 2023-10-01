@@ -22,7 +22,14 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         GetInput();
-        Rotation();
+        if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
+        {
+            Rotation();
+        }else
+        {
+            Debug.Log("Debug");
+        }
+        
     }
     void FixedUpdate()
     {
