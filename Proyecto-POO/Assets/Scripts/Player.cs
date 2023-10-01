@@ -2,22 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
+    [Header("Shooting Mechanic")]
+    [SerializeField]
+    Transform firePivot;
+    [SerializeField]
+    private GameObject bulletPrefab;
+    [SerializeField]
+    private float timeBetweenShoots;
+    [SerializeField]
+    BodyAnimation bodyAnimation;
+    private float nextTimetoShoot;
+
     [Header("Movement and Physics")]
+    [SerializeField]
+    private float speed = 5;
+    [SerializeField]
+    private float timeToStop = 0.1f;
     private Rigidbody2D rb;
     private float xAxis;
     private float yAxis;
     private Vector2 movementVector;
     private Vector2 inputVector;
     private Vector2 smoothVelocity;
-    [SerializeField]
-    private float speed = 5;
-    [SerializeField]
-    private float timeToStop = 0.1f;
+
+    #region State Variables
+    public bool isWalking;
+    public bool isShooting;
+    #endregion
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
     }
     private void Update()
     {
@@ -25,18 +42,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
         {
             Rotation();
-        }else
-        {
-            Debug.Log("Debug");
         }
-        
+        Shoot();
+
     }
     void FixedUpdate()
     {
         movementVector = Vector2.SmoothDamp(movementVector, inputVector, ref smoothVelocity, timeToStop);
         Move();
     }
-
     void GetInput()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
@@ -49,6 +63,11 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.magnitude < 0.01f)
         {
             rb.velocity = Vector2.zero;
+            isWalking = false;
+        }
+        else
+        {
+            isWalking = true;
         }
     }
     void Rotation()
@@ -58,6 +77,17 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(distance.y, distance.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle + 90);
     }
-    //Comentario de Albert
+    void Shoot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (Time.time > nextTimetoShoot)
+            {
+                isShooting = true;
+                nextTimetoShoot = Time.time + timeBetweenShoots;
+                bodyAnimation.ShootAnimation();
+                Instantiate(bulletPrefab, firePivot.position, firePivot.rotation);
+            }
+        }
+    }
 }
-

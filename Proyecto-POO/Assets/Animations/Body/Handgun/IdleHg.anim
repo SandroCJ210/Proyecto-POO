@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle
+  m_Name: IdleHg
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -23,7 +23,7 @@ AnimationClip:
     - time: 0
       value: {fileID: 21300000, guid: 337152fd05fcfa246910181b8dacc2ce, type: 3}
     - time: 0.033333335
-      value: {fileID: 21300000, guid: 51006fa64fba16b4881946c6d274a902, type: 3}
+      value: {fileID: 21300000, guid: 337152fd05fcfa246910181b8dacc2ce, type: 3}
     - time: 0.06666667
       value: {fileID: 21300000, guid: 1202039c28f771c42acaa74ea57c6971, type: 3}
     - time: 0.1
@@ -83,7 +83,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: 21300000, guid: 337152fd05fcfa246910181b8dacc2ce, type: 3}
-    - {fileID: 21300000, guid: 51006fa64fba16b4881946c6d274a902, type: 3}
+    - {fileID: 21300000, guid: 337152fd05fcfa246910181b8dacc2ce, type: 3}
     - {fileID: 21300000, guid: 1202039c28f771c42acaa74ea57c6971, type: 3}
     - {fileID: 21300000, guid: 0ed5af5e2e3de5640ade1b7f3c990214, type: 3}
     - {fileID: 21300000, guid: a25f034fd647e6042a626748448cb478, type: 3}
