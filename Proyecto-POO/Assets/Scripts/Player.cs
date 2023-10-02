@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    #region Shooting Mechanic
     [Header("Shooting Mechanic")]
     [SerializeField]
     Transform firePivot;
@@ -14,7 +15,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     BodyAnimation bodyAnimation;
     private float nextTimetoShoot;
-
+    #endregion
+    #region Movement and Physics
     [Header("Movement and Physics")]
     [SerializeField]
     private float speed = 5;
@@ -24,12 +26,11 @@ public class Player : MonoBehaviour
     private float xAxis;
     private float yAxis;
     private Vector2 movementVector;
-    private Vector2 inputVector;
+    public Vector2 inputVector;
     private Vector2 smoothVelocity;
-
+    #endregion
     #region State Variables
     public bool isWalking;
-    public bool isShooting;
     #endregion
     void Start()
     {
@@ -44,11 +45,11 @@ public class Player : MonoBehaviour
             Rotation();
         }
         Shoot();
-
+        Reload();
     }
     void FixedUpdate()
     {
-        movementVector = Vector2.SmoothDamp(movementVector, inputVector, ref smoothVelocity, timeToStop);
+        movementVector = Vector2.SmoothDamp(movementVector, inputVector.normalized, ref smoothVelocity, timeToStop);
         Move();
     }
     void GetInput()
@@ -60,10 +61,10 @@ public class Player : MonoBehaviour
     void Move()
     {
         rb.velocity = new Vector2(movementVector.x, movementVector.y) * speed;
-        if (rb.velocity.magnitude < 0.01f)
+        if (rb.velocity.magnitude < 1)
         {
-            rb.velocity = Vector2.zero;
             isWalking = false;
+            rb.velocity = Vector2.zero;
         }
         else
         {
@@ -83,11 +84,17 @@ public class Player : MonoBehaviour
         {
             if (Time.time > nextTimetoShoot)
             {
-                isShooting = true;
                 nextTimetoShoot = Time.time + timeBetweenShoots;
                 bodyAnimation.ShootAnimation();
                 Instantiate(bulletPrefab, firePivot.position, firePivot.rotation);
             }
+        }
+    }
+    void Reload()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            bodyAnimation.ReloadAnimation();
         }
     }
 }

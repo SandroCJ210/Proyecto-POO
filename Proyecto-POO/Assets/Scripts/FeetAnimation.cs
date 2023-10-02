@@ -11,9 +11,15 @@ public class FeetAnimation : MonoBehaviour
     {
         an = GetComponent<Animator>();
     }
-
-    void Update()
+    private void Update()
     {
-        
+        if (player.isWalking)
+        {
+            an.SetBool("isWalking", true);
+        }
+        else
+        {
+            an.SetBool("isWalking", false);
+        }
     }
 }
