@@ -15,7 +15,7 @@ TagManager:
   - 
   - 
   - 
-  - Obstacle
+  - 
   - 
   - 
   - 
@@ -46,4 +46,10 @@ TagManager:
     locked: 0
   - name: Body
     uniqueID: 2398072489
+    locked: 0
+  - name: suelo
+    uniqueID: 3049758729
+    locked: 0
+  - name: paredes
+    uniqueID: 1856556415
     locked: 0
