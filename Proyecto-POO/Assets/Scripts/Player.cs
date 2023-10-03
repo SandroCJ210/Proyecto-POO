@@ -13,8 +13,10 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float timeBetweenShoots;
     [SerializeField]
-    BodyAnimation bodyAnimation;
+    private int handGunBullets = 12;
+    private Animator an;
     private float nextTimetoShoot;
+    
     #endregion
     #region Movement and Physics
     [Header("Movement and Physics")]
@@ -32,18 +34,20 @@ public class Player : MonoBehaviour
     #region State Variables
     public bool isWalking;
     #endregion
+    #region Events
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        an = GetComponent<Animator>();
     }
     private void Update()
     {
         GetInput();
+        /*
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
         {
             Rotation();
-        }
+        }*/
         Shoot();
         Reload();
     }
@@ -52,10 +56,30 @@ public class Player : MonoBehaviour
         movementVector = Vector2.SmoothDamp(movementVector, inputVector.normalized, ref smoothVelocity, timeToStop);
         Move();
     }
+    private void LateUpdate()
+    {
+        if (isWalking)
+        {
+            an.SetBool("isWalking", true);
+        }
+        else
+        {
+            an.SetBool("isWalking", false);
+        }
+    }
+    #endregion
     void GetInput()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
+        if (xAxis < 0 && transform.right.x > 0)
+        {
+            transform.right = transform.right * -1;
+        }
+        else if (xAxis > 0 && transform.right.x < 0)
+        {
+            transform.right = transform.right * -1;
+        }
         inputVector = new Vector2(xAxis, yAxis);
     }
     void Move()
@@ -71,30 +95,31 @@ public class Player : MonoBehaviour
             isWalking = true;
         }
     }
-    void Rotation()
-    {
-        Vector2 mousePosition = Input.mousePosition;
-        Vector3 distance = transform.position - Camera.main.ScreenToWorldPoint(mousePosition);
-        float angle = Mathf.Atan2(distance.y, distance.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle + 90);
-    }
     void Shoot()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && handGunBullets !=0)
         {
             if (Time.time > nextTimetoShoot)
             {
                 nextTimetoShoot = Time.time + timeBetweenShoots;
-                bodyAnimation.ShootAnimation();
+                an.SetTrigger("Shoot");
                 Instantiate(bulletPrefab, firePivot.position, firePivot.rotation);
+                handGunBullets--;
             }
         }
     }
     void Reload()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        
+        if (Input.GetKeyDown(KeyCode.R) || handGunBullets == 0)
         {
-            bodyAnimation.ReloadAnimation();
+            an.SetTrigger("Reload");
+            StartCoroutine(WaitReload());
+            handGunBullets = 12;
         }
+    }
+    IEnumerator WaitReload()
+    {
+        yield return new WaitForSeconds(1);
     }
 }
