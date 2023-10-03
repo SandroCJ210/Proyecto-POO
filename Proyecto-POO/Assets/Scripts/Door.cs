@@ -6,6 +6,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public Camera gameCamera;
+    GameObject player;
     public Vector3 directionToChangeRoom;
     public float lerpDuration;
     private Vector3 gameCameraVector;
@@ -16,6 +17,7 @@ public class Door : MonoBehaviour
     void Start()
     {
         gameCamera = Camera.main;
+        player = GameObject.Find("Player");
         float gameCameraHeight = 2 * gameCamera.orthographicSize;
         float gameCameraWidth = gameCameraHeight * gameCamera.aspect;
         gameCameraVector = new Vector3(gameCameraWidth, gameCameraHeight, gameCamera.transform.position.z);
@@ -49,9 +51,10 @@ public class Door : MonoBehaviour
     {
         if (collision.GetComponent<Player>())
         {
-            Vector3 actualPosition = gameCamera.transform.position;
-            Vector3 targetPosition = actualPosition + Vector3.Scale(directionToChangeRoom, gameCameraVector);
-            StartCoroutine(MoveCamera(actualPosition, targetPosition, lerpDuration));
+            MovePlayerToRoom();
+            Vector3 actualCamPosition = gameCamera.transform.position;
+            Vector3 targetCamPosition = actualCamPosition + Vector3.Scale(directionToChangeRoom, gameCameraVector);
+            StartCoroutine(MoveCamera(actualCamPosition, targetCamPosition, lerpDuration));
             switch (direction)
             {
                 case Directions.Up:
@@ -70,6 +73,13 @@ public class Door : MonoBehaviour
         }
     }
 
+    void MovePlayerToRoom()
+    {
+        Vector3 actualPlayerPosition = player.transform.position;
+        Vector3 advance = new Vector3(3,3,actualPlayerPosition.z);
+        Vector3 targetPosition = actualPlayerPosition + Vector3.Scale(directionToChangeRoom, advance);
+        player.transform.position = targetPosition;
+    }
     IEnumerator MoveCamera(Vector3 start, Vector3 target, float lerpDuration)
     {
         float elapsedTime = 0;
