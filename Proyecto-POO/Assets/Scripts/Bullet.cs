@@ -8,20 +8,20 @@ public class Bullet : MonoBehaviour
     private float bulletSpeed;
     [SerializeField]
     private float timeToDestroy;
+    private Rigidbody2D rb;
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         StartCoroutine(WaitThenDestroy());
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-        transform.Translate(Vector3.up * bulletSpeed * Time.deltaTime);
+        transform.Translate(Vector3.up * bulletSpeed);
     }
-
     IEnumerator WaitThenDestroy()
     {
         yield return new WaitForSeconds(timeToDestroy);
         Destroy(gameObject);
-
     }
 }
