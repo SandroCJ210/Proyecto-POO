@@ -5,11 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     #region Shooting Mechanic
-    [Header("Shooting Mechanic")]
-    [SerializeField]
-    private Transform firePivot;
-    [SerializeField]
-    private GameObject bulletPrefab;
+    
     
     
     #endregion
@@ -37,11 +33,10 @@ public class Player : MonoBehaviour
     private void Update()
     {
         GetInput();
-        Shoot();
     }
     void FixedUpdate()
     {
-        movementVector = Vector2.SmoothDamp(movementVector, inputVector.normalized, ref smoothVelocity, timeToStop);
+        movementVector = Vector2.SmoothDamp(movementVector, inputVector, ref smoothVelocity, timeToStop);
         Move();
     }
     #endregion
@@ -51,11 +46,11 @@ public class Player : MonoBehaviour
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
         
-        inputVector = new Vector2(xAxis, yAxis);
+        inputVector = new Vector2(xAxis, yAxis).normalized;
     }
     void Move()
     {
-        rb.velocity = new Vector2(movementVector.x, movementVector.y) * speed;
+        rb.velocity = new Vector2(movementVector.x,movementVector.y) * speed;
         if (rb.velocity.magnitude < 1)
         {
             isWalking = false;
@@ -64,14 +59,6 @@ public class Player : MonoBehaviour
         else
         {
             isWalking = true;
-        }
-    }
-    void Shoot()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            
-                Instantiate(bulletPrefab, firePivot.position, firePivot.rotation);
         }
     }
     #endregion

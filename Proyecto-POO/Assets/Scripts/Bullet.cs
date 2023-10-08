@@ -8,10 +8,13 @@ public class Bullet : MonoBehaviour
     private float bulletSpeed;
     [SerializeField]
     private float timeToDestroy;
+    [SerializeField]
+    private float toFall;
     private Rigidbody2D rb;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(rb.velocity.x, toFall*-1);
         StartCoroutine(WaitThenDestroy());
     }
 

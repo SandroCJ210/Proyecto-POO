@@ -415,10 +415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d6b6677717ec747aed077d110db3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePivot: {fileID: 30161356}
-  bulletPrefab: {fileID: 5791929315333659399, guid: 1cb5981b464f79f49a3d66c9f7ce93a0, type: 3}
-  speed: 10
-  timeToStop: 0.1
+  speed: 6.5
+  timeToStop: 0.15
   inputVector: {x: 0, y: 0}
   isWalking: 0
 --- !u!1 &1294037175
@@ -663,7 +661,7 @@ Transform:
   m_GameObject: {fileID: 1377519953}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.137, z: 0}
+  m_LocalPosition: {x: 0, y: 0.268, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -754,10 +752,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f265f1f6f6a8f469d3ba2536d421d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 5791929315333659399, guid: 1cb5981b464f79f49a3d66c9f7ce93a0, type: 3}
+  timeBetweenShoots: 0.3
   player: {fileID: 710525710}
   shootVector: {x: 0, y: 0}
-  timeBetweenShoots: 0
-  nextTimetoShoot: 0
 --- !u!1 &1516810531
 GameObject:
   m_ObjectHideFlags: 0
@@ -8837,7 +8835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14997307e5ae1374bba2cd6a04c86048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 710525710}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
