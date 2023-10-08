@@ -11,10 +11,7 @@ public class Player : MonoBehaviour
     private Transform firePivot;
     [SerializeField]
     private GameObject bulletPrefab;
-    public AnimationCurve curve;
-    public Camera gameCamera;
-    public float lerpDuration;
-    private Vector3 gameCameraVector;
+
 
     #endregion
     #region Movement and Physics
@@ -29,6 +26,12 @@ public class Player : MonoBehaviour
     private Vector2 movementVector;
     public Vector2 inputVector;
     private Vector2 smoothVelocity;
+    #endregion
+    #region CameraMovement
+    public AnimationCurve curve;
+    public Camera gameCamera;
+    public float lerpDuration;
+    private Vector3 gameCameraVector;
     #endregion
     #region State Variables
     public bool isWalking;
