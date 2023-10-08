@@ -97,16 +97,19 @@ public class Player : MonoBehaviour
 
         RaycastHit2D hit;
 
-        hit = Physics2D.Raycast(transform.position, inputVector, rayLength);
-
-        if(hit.collider.tag == "Door" && inputVector.magnitude != Mathf.Sqrt(2))
+        if(hit = Physics2D.Raycast(transform.position, inputVector, rayLength))
         {
-            MovePlayerToRoom();
-            Vector3 actualCamPosition = gameCamera.transform.position;
-            Vector3 targetCamPosition = actualCamPosition + Vector3.Scale(inputVector, gameCameraVector);
-            StartCoroutine(MoveCamera(actualCamPosition,targetCamPosition,lerpDuration));
-              
+            if (hit.collider.tag == "Door" && inputVector.magnitude != Mathf.Sqrt(2))
+            {
+                MovePlayerToRoom();
+                Vector3 actualCamPosition = gameCamera.transform.position;
+                Vector3 targetCamPosition = actualCamPosition + Vector3.Scale(inputVector, gameCameraVector);
+                StartCoroutine(MoveCamera(actualCamPosition, targetCamPosition, lerpDuration));
+
+            }
         }
+
+        
     }
 
     void MovePlayerToRoom()
