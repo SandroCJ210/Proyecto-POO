@@ -7,14 +7,11 @@ public class Player : MonoBehaviour
     #region Shooting Mechanic
     [Header("Shooting Mechanic")]
     [SerializeField]
-    Transform firePivot;
+    private Transform firePivot;
     [SerializeField]
     private GameObject bulletPrefab;
-    [SerializeField]
-    private float timeBetweenShoots;
-    [SerializeField]
-    BodyAnimation bodyAnimation;
-    private float nextTimetoShoot;
+    
+    
     #endregion
     #region Movement and Physics
     [Header("Movement and Physics")]
@@ -32,30 +29,28 @@ public class Player : MonoBehaviour
     #region State Variables
     public bool isWalking;
     #endregion
+    #region Events
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
     }
     private void Update()
     {
         GetInput();
-        if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
-        {
-            Rotation();
-        }
         Shoot();
-        Reload();
     }
     void FixedUpdate()
     {
         movementVector = Vector2.SmoothDamp(movementVector, inputVector.normalized, ref smoothVelocity, timeToStop);
         Move();
     }
+    #endregion
+    #region Functions
     void GetInput()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
+        
         inputVector = new Vector2(xAxis, yAxis);
     }
     void Move()
@@ -71,30 +66,13 @@ public class Player : MonoBehaviour
             isWalking = true;
         }
     }
-    void Rotation()
-    {
-        Vector2 mousePosition = Input.mousePosition;
-        Vector3 distance = transform.position - Camera.main.ScreenToWorldPoint(mousePosition);
-        float angle = Mathf.Atan2(distance.y, distance.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle + 90);
-    }
     void Shoot()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (Time.time > nextTimetoShoot)
-            {
-                nextTimetoShoot = Time.time + timeBetweenShoots;
-                bodyAnimation.ShootAnimation();
+            
                 Instantiate(bulletPrefab, firePivot.position, firePivot.rotation);
-            }
         }
     }
-    void Reload()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            bodyAnimation.ReloadAnimation();
-        }
-    }
+    #endregion
 }

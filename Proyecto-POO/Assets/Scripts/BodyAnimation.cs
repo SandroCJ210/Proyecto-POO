@@ -11,23 +11,10 @@ public class BodyAnimation : MonoBehaviour
     {
         an = GetComponent<Animator>();
     }
-    private void Update()
+    private void LateUpdate()
     {
-        if (player.isWalking)
-        {
-            an.SetBool("isWalking", true);
-        }
-        else
-        {
-            an.SetBool("isWalking", false);
-        }
-    }
-    public void ShootAnimation()
-    {
-        an.SetTrigger("Shoot");
-    }
-    public void ReloadAnimation()
-    {
-        an.SetTrigger("Reload");
+        an.SetFloat("Horizontal", player.inputVector.x);
+        an.SetFloat("Vertical", player.inputVector.y);
+        an.SetFloat("Speed", player.inputVector.sqrMagnitude);
     }
 }
