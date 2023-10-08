@@ -104,10 +104,7 @@ public class Player : MonoBehaviour
             MovePlayerToRoom();
             Vector3 actualCamPosition = gameCamera.transform.position;
             Vector3 targetCamPosition = actualCamPosition + Vector3.Scale(inputVector, gameCameraVector);
-
-            Debug.Log("Colision");
             StartCoroutine(MoveCamera(actualCamPosition,targetCamPosition,lerpDuration));
-            
               
         }
     }
@@ -119,6 +116,7 @@ public class Player : MonoBehaviour
         Vector3 targetPosition = actualPlayerPosition + Vector3.Scale(inputVector, advance);
         transform.position = targetPosition;
     }
+
     IEnumerator MoveCamera(Vector3 start, Vector3 target, float lerpDuration)
     {
         float elapsedTime = 0;
@@ -133,8 +131,6 @@ public class Player : MonoBehaviour
         gameCamera.transform.position = target;
 
     }
-
-
     #endregion
 
 
