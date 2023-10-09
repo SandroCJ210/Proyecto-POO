@@ -725,6 +725,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePivot: {fileID: 30161356}
   bulletPrefab: {fileID: 5791929315333659399, guid: 1cb5981b464f79f49a3d66c9f7ce93a0, type: 3}
+  speed: 6
+  timeToStop: 0.1
+  inputVector: {x: 0, y: 0}
   curve:
     serializedVersion: 2
     m_Curve:
@@ -751,9 +754,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   gameCamera: {fileID: 0}
   lerpDuration: 0.5
-  speed: 6
-  timeToStop: 0.1
-  inputVector: {x: 0, y: 0}
   isWalking: 0
 --- !u!1 &743142858
 GameObject:
