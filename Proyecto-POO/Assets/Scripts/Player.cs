@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    #region Shooting Mechanic
-    
-    
-    
-    #endregion
     #region Movement and Physics
     [Header("Movement and Physics")]
     [SerializeField]
@@ -26,7 +21,7 @@ public class Player : MonoBehaviour
     public bool isWalking;
     #endregion
     #region Events
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
@@ -41,14 +36,14 @@ public class Player : MonoBehaviour
     }
     #endregion
     #region Functions
-    void GetInput()
+    private void GetInput()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
         
         inputVector = new Vector2(xAxis, yAxis).normalized;
     }
-    void Move()
+    private void Move()
     {
         rb.velocity = new Vector2(movementVector.x,movementVector.y) * speed;
         if (rb.velocity.magnitude < 1)

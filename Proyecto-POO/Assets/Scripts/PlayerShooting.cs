@@ -55,7 +55,14 @@ public class PlayerShooting : MonoBehaviour
             if (Time.time > nextTimetoShoot)
             {
                 nextTimetoShoot = Time.time + timeBetweenShoots;
-                Instantiate(bulletPrefab, transform.position, Quaternion.Euler(new Vector3(0,0,shootVector.x*-90)));
+                if (shootVector.y == -1) 
+                {
+                    Instantiate(bulletPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+                }
+                else
+                {
+                    Instantiate(bulletPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, shootVector.x*-90)));
+                }
             }
         }
         

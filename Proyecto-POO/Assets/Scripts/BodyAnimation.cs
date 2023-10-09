@@ -7,7 +7,7 @@ public class BodyAnimation : MonoBehaviour
     [SerializeField]
     private Player player;
     private Animator an;
-    void Start()
+    private void Start()
     {
         an = GetComponent<Animator>();
     }
