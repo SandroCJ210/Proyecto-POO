@@ -15,7 +15,7 @@ public class PlayerShooting : MonoBehaviour
     private float xAxis;
     private float yAxis;
     [HideInInspector]
-    public Vector2 shootVector;
+    private Vector2 shootVector;
     
     private float nextTimetoShoot;
     void Start()
@@ -32,9 +32,9 @@ public class PlayerShooting : MonoBehaviour
         an.SetFloat("HShoot", xAxis);
         an.SetFloat("VShoot", yAxis);
         an.SetFloat("isShooting", shootVector.sqrMagnitude);
-        an.SetFloat("Horizontal", player.inputVector.x);
-        an.SetFloat("Vertical",player.inputVector.y);
-        an.SetFloat("Sp", player.inputVector.sqrMagnitude);
+        an.SetFloat("Horizontal", player.InputVector.x);
+        an.SetFloat("Vertical",player.InputVector.y);
+        an.SetFloat("Sp", player.InputVector.sqrMagnitude);
     }
 
     void Shooting()

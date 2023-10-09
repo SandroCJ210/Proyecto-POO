@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     private float xAxis;
     private float yAxis;
     private Vector2 movementVector;
-    public Vector2 inputVector;
+    public Vector2 InputVector { get; private set; }
     private Vector2 smoothVelocity;
     #endregion
     #region State Variables
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
-        movementVector = Vector2.SmoothDamp(movementVector, inputVector, ref smoothVelocity, timeToStop);
+        movementVector = Vector2.SmoothDamp(movementVector, InputVector, ref smoothVelocity, timeToStop);
         Move();
     }
     #endregion
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
         
-        inputVector = new Vector2(xAxis, yAxis).normalized;
+        InputVector = new Vector2(xAxis, yAxis).normalized;
     }
     private void Move()
     {

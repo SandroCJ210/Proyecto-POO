@@ -13,8 +13,8 @@ public class BodyAnimation : MonoBehaviour
     }
     private void LateUpdate()
     {
-        an.SetFloat("Horizontal", player.inputVector.x);
-        an.SetFloat("Vertical", player.inputVector.y);
-        an.SetFloat("Speed", player.inputVector.sqrMagnitude);
+        an.SetFloat("Horizontal", player.InputVector.x);
+        an.SetFloat("Vertical", player.InputVector.y);
+        an.SetFloat("Speed", player.InputVector.sqrMagnitude);
     }
 }
