@@ -5,82 +5,44 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    public Camera gameCamera;
-    GameObject player;
-    public Vector3 directionToChangeRoom;
-    public float lerpDuration;
+    private Camera gameCamera;
+    private Player player;
+    private static float lerpDuration;
     private Vector3 gameCameraVector;
-    private enum Directions { Up, Down, Left, Right };
-    [SerializeField] private Directions direction;
-    [SerializeField] private AnimationCurve curve;
+    private AnimationCurve curve;
 
     void Start()
     {
         gameCamera = Camera.main;
-        player = GameObject.Find("Player");
+        player = FindAnyObjectByType<Player>();
         float gameCameraHeight = 2 * gameCamera.orthographicSize;
         float gameCameraWidth = gameCameraHeight * gameCamera.aspect;
         gameCameraVector = new Vector3(gameCameraWidth, gameCameraHeight, gameCamera.transform.position.z);
         lerpDuration = 0.5f;
+        curve = new AnimationCurve(new Keyframe(0, 0), new Keyframe(1, 1));
+        curve.preWrapMode = WrapMode.Clamp;
+        curve.postWrapMode = WrapMode.Clamp;
     }
 
-    void Update()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        switch (direction)
-        {
-            case Directions.Up:
-                directionToChangeRoom = Vector3.up;
-                break;
-            case Directions.Down:
-                directionToChangeRoom = Vector3.down;
-                break;
-            case Directions.Left:
-                directionToChangeRoom = Vector3.left;
-                break;
-            case Directions.Right:
-                directionToChangeRoom = Vector3.right;
-                break;
-            default:
-                directionToChangeRoom = Vector3.left;
-                break;
-        }
-
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.GetComponent<Player>())
+        if (col.tag == "Player" && player.inputVector.magnitude != Mathf.Sqrt(2))
         {
             MovePlayerToRoom();
             Vector3 actualCamPosition = gameCamera.transform.position;
-            Vector3 targetCamPosition = actualCamPosition + Vector3.Scale(directionToChangeRoom, gameCameraVector);
+            Vector3 targetCamPosition = actualCamPosition + Vector3.Scale(player.inputVector, gameCameraVector);
             StartCoroutine(MoveCamera(actualCamPosition, targetCamPosition, lerpDuration));
-            switch (direction)
-            {
-                case Directions.Up:
-                    direction = Directions.Down;
-                    break;
-                case Directions.Down:
-                    direction = Directions.Up;
-                    break;
-                case Directions.Left:
-                    direction = Directions.Right;
-                    break;
-                case Directions.Right:
-                    direction = Directions.Left;
-                    break;
-            }
         }
     }
 
-    void MovePlayerToRoom()
+    private void MovePlayerToRoom()
     {
         Vector3 actualPlayerPosition = player.transform.position;
-        Vector3 advance = new Vector3(3,3,actualPlayerPosition.z);
-        Vector3 targetPosition = actualPlayerPosition + Vector3.Scale(directionToChangeRoom, advance);
+        Vector3 advance = new Vector3(3, 3, actualPlayerPosition.z);
+        Vector3 targetPosition = actualPlayerPosition + Vector3.Scale(player.inputVector, advance);
         player.transform.position = targetPosition;
     }
-    IEnumerator MoveCamera(Vector3 start, Vector3 target, float lerpDuration)
+    private IEnumerator MoveCamera(Vector3 start, Vector3 target, float lerpDuration)
     {
         float elapsedTime = 0;
 

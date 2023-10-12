@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
     {
         GetInput();
         Shoot();
-        DetectDoor();
+        //DetectDoor();
     }
     void FixedUpdate()
     {
@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void DetectDoor()
+    /*void DetectDoor()
     {
         float rayLength = 0.8f;
         Ray2D ray = new Ray2D(transform.position, inputVector);
@@ -109,7 +109,6 @@ public class Player : MonoBehaviour
             }
         }
 
-        
     }
 
     void MovePlayerToRoom()
@@ -133,7 +132,7 @@ public class Player : MonoBehaviour
 
         gameCamera.transform.position = target;
 
-    }
+    }*/
     #endregion
 
 
