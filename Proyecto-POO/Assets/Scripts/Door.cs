@@ -26,11 +26,11 @@ public class Door : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Player" && player.inputVector.magnitude != Mathf.Sqrt(2))
+        if (col.tag == "Player" && player.InputVector.magnitude != Mathf.Sqrt(2))
         {
             MovePlayerToRoom();
             Vector3 actualCamPosition = gameCamera.transform.position;
-            Vector3 targetCamPosition = actualCamPosition + Vector3.Scale(player.inputVector, gameCameraVector);
+            Vector3 targetCamPosition = actualCamPosition + Vector3.Scale(player.InputVector, gameCameraVector);
             StartCoroutine(MoveCamera(actualCamPosition, targetCamPosition, lerpDuration));
         }
     }
@@ -39,7 +39,7 @@ public class Door : MonoBehaviour
     {
         Vector3 actualPlayerPosition = player.transform.position;
         Vector3 advance = new Vector3(3, 3, actualPlayerPosition.z);
-        Vector3 targetPosition = actualPlayerPosition + Vector3.Scale(player.inputVector, advance);
+        Vector3 targetPosition = actualPlayerPosition + Vector3.Scale(player.InputVector, advance);
         player.transform.position = targetPosition;
     }
     private IEnumerator MoveCamera(Vector3 start, Vector3 target, float lerpDuration)
