@@ -18,11 +18,15 @@ public class Player : MonoBehaviour
     private Vector2 smoothVelocity;
     #endregion
     #region State Variables
+    public HealthHeartBar healthHeartBar;
+    private float health, maxHealth;
     public bool isWalking;
     #endregion
     #region Events
     private void Start()
     {
+        maxHealth = 6;
+        health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
     }
     private void Update()
@@ -54,6 +58,34 @@ public class Player : MonoBehaviour
         else
         {
             isWalking = true;
+        }
+    }
+    public float GetHealth()
+    {
+        return health;
+    }
+    public float GetMaxHealth()
+    {
+        return maxHealth;
+    }
+    public void TakeDamage()
+    {
+        if (health > 0)
+        {
+            health -= 1;
+            if(health < 0)
+            {
+                //GameOverScreen and reload level
+            }
+            healthHeartBar.DrawHearts();
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Enemy")
+        {
+            TakeDamage();
+            healthHeartBar.DrawHearts();
         }
     }
     #endregion

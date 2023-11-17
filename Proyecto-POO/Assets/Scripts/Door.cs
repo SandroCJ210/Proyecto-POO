@@ -23,7 +23,6 @@ public class Door : MonoBehaviour
         curve.preWrapMode = WrapMode.Clamp;
         curve.postWrapMode = WrapMode.Clamp;
     }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Player" && player.InputVector.magnitude != Mathf.Sqrt(2))
@@ -34,7 +33,6 @@ public class Door : MonoBehaviour
             StartCoroutine(MoveCamera(actualCamPosition, targetCamPosition, lerpDuration));
         }
     }
-
     private void MovePlayerToRoom()
     {
         Vector3 actualPlayerPosition = player.transform.position;
