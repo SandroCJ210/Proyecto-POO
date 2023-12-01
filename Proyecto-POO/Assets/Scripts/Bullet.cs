@@ -9,42 +9,47 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     private float timeToDestroy;
     [SerializeField]
-    private float fallingSpeed;
-    private Animator an;
+    private GameObject impactEffect;
+    [SerializeField]
+    private PlayerShooting pS;
+    private Vector2 direction;
     private Rigidbody2D rb;
-    //private Rigidbody2D rbChildren;
-    //private bool stop = false;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //rbChildren = GetComponent<Rigidbody2D>();
-        an = GetComponent<Animator>();
+        pS = FindObjectOfType<PlayerShooting>();
         StartCoroutine(WaitThenDestroy());
+        direction = pS.ShootVector;
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = transform.up * bulletSpeed;
+        rb.velocity = direction * bulletSpeed;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        DestroyTear();
+        if (!collision.transform.CompareTag("Player"))
+        {
+            if (collision.transform.CompareTag("Enemy"))
+            {
+                Destroy(collision.gameObject);
+            }
+            rb.velocity = Vector2.zero;
+            DestroyTear();
+        }
     }
-    private void DestroyTear()
-    {
-        rb.velocity = Vector2.zero;
-        an.Play("Impact");
-        StartCoroutine(WaitTillAnIsOver());
-        
-    }
+
     IEnumerator WaitThenDestroy()
     {
         yield return new WaitForSeconds(timeToDestroy);
         DestroyTear();
     }
-    IEnumerator WaitTillAnIsOver()
+    void DestroyTear()
     {
-        yield return new WaitForSeconds(0.536f);
+        GameObject effect = Instantiate(impactEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 3f);
         Destroy(this.gameObject);
     }
+    
 }

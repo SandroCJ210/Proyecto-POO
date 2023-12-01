@@ -8,7 +8,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField]
     private GameObject bulletPrefab;
     [SerializeField]
-    private float timeBetweenShoots;
+    private float timeBetweenShots;
     [SerializeField]
     private Player player;
     private Animator an;
@@ -16,8 +16,10 @@ public class PlayerShooting : MonoBehaviour
     private float yAxis;
     [HideInInspector]
     private Vector2 shootVector;
-    
+
     private float nextTimetoShoot;
+
+    public Vector2 ShootVector { get => shootVector; }
     void Start()
     {
         an = GetComponent<Animator>();
@@ -52,14 +54,14 @@ public class PlayerShooting : MonoBehaviour
         {
             if (Time.time > nextTimetoShoot)
             {
-                nextTimetoShoot = Time.time + timeBetweenShoots;
+                nextTimetoShoot = Time.time + timeBetweenShots;
                 if (shootVector.y == -1) 
                 {
-                    Instantiate(bulletPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, 180)));
+                    Instantiate(bulletPrefab, transform.position, Quaternion.identity);
                 }
                 else
                 {
-                    Instantiate(bulletPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, shootVector.x*-90)));
+                    Instantiate(bulletPrefab, transform.position, Quaternion.identity);
                 }
             }
         }

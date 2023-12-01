@@ -18,7 +18,6 @@ public class Player : MonoBehaviour
     private Vector2 smoothVelocity;
     #endregion
     #region State Variables
-    public bool isWalking;
     #endregion
     #region Events
     private void Start()
@@ -48,12 +47,7 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector2(movementVector.x,movementVector.y) * speed;
         if (rb.velocity.magnitude < 1)
         {
-            isWalking = false;
             rb.velocity = Vector2.zero;
-        }
-        else
-        {
-            isWalking = true;
         }
     }
     #endregion
