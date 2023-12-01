@@ -12,13 +12,13 @@ public class Bullet : MonoBehaviour
     private float fallingSpeed;
     private Animator an;
     private Rigidbody2D rb;
-    private Rigidbody2D rbChildren;
-    private bool stop = false;
+    //private Rigidbody2D rbChildren;
+    //private bool stop = false;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rbChildren = GetComponentInChildren<Rigidbody2D>();
-        an = GetComponentInChildren<Animator>();
+        //rbChildren = GetComponent<Rigidbody2D>();
+        an = GetComponent<Animator>();
         StartCoroutine(WaitThenDestroy());
     }
 
@@ -26,18 +26,25 @@ public class Bullet : MonoBehaviour
     {
         rb.velocity = transform.up * bulletSpeed;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        DestroyTear();
+    }
+    private void DestroyTear()
+    {
+        rb.velocity = Vector2.zero;
+        an.Play("Impact");
+        StartCoroutine(WaitTillAnIsOver());
+        
+    }
     IEnumerator WaitThenDestroy()
     {
         yield return new WaitForSeconds(timeToDestroy);
-        if(rb.velocity.x < 0.1)
-        {
-            rbChildren.velocity = new Vector2(rb.velocity.x * 1 / 6, -0.5f);
-        }
-        else
-        {
-            rbChildren.velocity = new Vector2(0, 0.1f);
-        }
-        yield return new WaitForSeconds(0.2f);
-        Destroy(gameObject);
+        DestroyTear();
+    }
+    IEnumerator WaitTillAnIsOver()
+    {
+        yield return new WaitForSeconds(0.536f);
+        Destroy(this.gameObject);
     }
 }

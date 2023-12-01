@@ -386,7 +386,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3.5
   timeToStop: 0.075
-  inputVector: {x: 0, y: 0}
   isWalking: 0
 --- !u!1 &1294037175
 GameObject:
@@ -721,10 +720,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f265f1f6f6a8f469d3ba2536d421d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 3111633188021516975, guid: 34d8e5374c673134f86f1b4deea8c1e7, type: 3}
+  bulletPrefab: {fileID: 7112837419972168867, guid: 24ca4382d9017df4da7707348cac2a46, type: 3}
   timeBetweenShoots: 0.35
   player: {fileID: 710525710}
-  shootVector: {x: 0, y: 0}
 --- !u!1 &1516810531
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,8 +39,6 @@ public class PlayerShooting : MonoBehaviour
 
     void Shooting()
     {
-        
-        
         if (yAxis == 0)
         {
             xAxis = Input.GetAxisRaw("HorizontalShoot");
@@ -65,6 +63,5 @@ public class PlayerShooting : MonoBehaviour
                 }
             }
         }
-        
     }
 }
