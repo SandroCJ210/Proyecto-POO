@@ -36,7 +36,7 @@ public class Door : MonoBehaviour
     private void MovePlayerToRoom()
     {
         Vector3 actualPlayerPosition = player.transform.position;
-        Vector3 advance = new Vector3(3, 3, actualPlayerPosition.z);
+        Vector3 advance = new Vector3(1.9f, 1.9f, actualPlayerPosition.z);
         Vector3 targetPosition = actualPlayerPosition + Vector3.Scale(player.InputVector, advance);
         player.transform.position = targetPosition;
     }
