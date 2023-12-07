@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6e2a488a045e80a42beb277c02c58c9a
+guid: 50b94a87243ac4b4fb91749290a005cc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: controls_0
+      name: "telara\xF1a_0"
       rect:
         serializedVersion: 2
-        x: 8
-        y: 8
-        width: 60
-        height: 63
+        x: 0
+        y: 0
+        width: 33
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e28fb61d89c71e54ca45a0f1478e98d0
-      internalID: 1546622054
+      spriteID: 4f304674377385d4788bb9525f5aa4d2
+      internalID: -889729847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controls_1
+      name: "telara\xF1a_1"
       rect:
         serializedVersion: 2
-        x: 96
-        y: 5
-        width: 56
-        height: 66
+        x: 0
+        y: 26
+        width: 25
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1a64cc78c90ae748b8a91085812f1a4
-      internalID: -1209522061
+      spriteID: 8bbbe50e708a0d547864b03236d47b88
+      internalID: 498419879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controls_2
+      name: "telara\xF1a_2"
       rect:
         serializedVersion: 2
-        x: 179
-        y: 7
-        width: 55
-        height: 62
+        x: 26
+        y: 18
+        width: 25
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,29 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdf396e9b7edb164faede6ad710cd3c7
-      internalID: 478751852
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: controls_3
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 6
-        width: 57
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7604c37d7a8493b4aadef812b1add9c9
-      internalID: -853284843
+      spriteID: 6bfd0c8ca7bbda54c8eb1106e9a3d381
+      internalID: -273211642
       vertices: []
       indices: 
       edges: []
@@ -217,10 +196,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      controls_0: 2125147682
-      controls_1: -376285515
-      controls_2: -406553116
-      controls_3: 93782862
+      "telara\xF1a_0": -889729847
+      "telara\xF1a_1": 498419879
+      "telara\xF1a_2": -273211642
+      "telara\xF1a_3": -1251277752
+      "telara\xF1a_4": -617804868
+      "telara\xF1a_5": 215516743
+      "telara\xF1a_6": 1934718047
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
