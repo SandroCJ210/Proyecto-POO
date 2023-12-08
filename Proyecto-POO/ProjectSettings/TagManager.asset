@@ -4,6 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Door
   - Enemy
   layers:
   - Default
@@ -42,11 +43,11 @@ TagManager:
   - name: Room
     uniqueID: 3049758729
     locked: 0
-  - name: suelo
-    uniqueID: 1761867087
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: suelo
+    uniqueID: 1761867087
     locked: 0
   - name: paredes
     uniqueID: 1984995771
