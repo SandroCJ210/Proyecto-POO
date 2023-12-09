@@ -48,6 +48,10 @@ public class Player : MonoBehaviour
         yAxis = Input.GetAxisRaw("Vertical");
         
         InputVector = new Vector2(xAxis, yAxis).normalized;
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(1);
+        }
     }
     private void Move()
     {
