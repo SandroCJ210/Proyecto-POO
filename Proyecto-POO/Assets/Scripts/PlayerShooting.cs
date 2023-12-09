@@ -16,10 +16,9 @@ public class PlayerShooting : MonoBehaviour
     private float yAxis;
     [HideInInspector]
     private Vector2 shootVector;
-
     private float nextTimetoShoot;
-
     public Vector2 ShootVector { get => shootVector; }
+
     void Start()
     {
         an = GetComponent<Animator>();
