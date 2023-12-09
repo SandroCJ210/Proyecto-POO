@@ -48,6 +48,10 @@ public class Player : MonoBehaviour
         yAxis = Input.GetAxisRaw("Vertical");
         
         InputVector = new Vector2(xAxis, yAxis).normalized;
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(1);
+        }
     }
     private void Move()
     {
@@ -70,7 +74,7 @@ public class Player : MonoBehaviour
         if (health > 0)
         {
             health -= 1;
-            if(health < 0)
+            if(health <= 0)
             {
                 SceneManager.LoadScene(0);
             }
