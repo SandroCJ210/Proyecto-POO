@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1649027104032541336}
   - component: {fileID: 1458199963228944351}
   - component: {fileID: 4670310266988254509}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: fuego_azul
   m_TagString: Enemy
   m_Icon: {fileID: 0}
