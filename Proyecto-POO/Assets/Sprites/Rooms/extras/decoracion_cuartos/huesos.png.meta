@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6e2a488a045e80a42beb277c02c58c9a
+guid: fd6bba3ed6c70e341b944051ff12a783
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,85 +123,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: controls_0
+      name: huesos
       rect:
         serializedVersion: 2
-        x: 8
+        x: 7
         y: 8
-        width: 60
-        height: 63
+        width: 17
+        height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e28fb61d89c71e54ca45a0f1478e98d0
-      internalID: 1546622054
+      spriteID: a9a4b2ece11a4014990a4d1f212e06b5
+      internalID: 1249014931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controls_1
+      name: huesos_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 5
-        width: 56
-        height: 66
+        x: 39
+        y: 11
+        width: 19
+        height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1a64cc78c90ae748b8a91085812f1a4
-      internalID: -1209522061
+      spriteID: a228681c9d88b854fa6b814d6b831fc2
+      internalID: 631626214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: controls_2
+      name: huesos_2
       rect:
         serializedVersion: 2
-        x: 179
+        x: 72
+        y: 8
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35147b3b23d1874887fbdbfbead9ef4
+      internalID: -784078788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: huesos_3
+      rect:
+        serializedVersion: 2
+        x: 107
         y: 7
-        width: 55
-        height: 62
+        width: 10
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdf396e9b7edb164faede6ad710cd3c7
-      internalID: 478751852
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: controls_3
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 6
-        width: 57
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7604c37d7a8493b4aadef812b1add9c9
-      internalID: -853284843
+      spriteID: 384546f44642fb949b758b85051237ee
+      internalID: 1481605014
       vertices: []
       indices: 
       edges: []
@@ -217,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      controls_0: 2125147682
-      controls_1: -376285515
-      controls_2: -406553116
-      controls_3: 93782862
+      huesos: 1249014931
+      huesos_1: 631626214
+      huesos_2: -784078788
+      huesos_3: 1481605014
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
