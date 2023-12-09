@@ -6,15 +6,12 @@ using UnityEngine.UI;
 
 public class HealthHeart : MonoBehaviour
 {
-
     public Sprite fullHeart, halfHeart, emptyHeart;
     Image heartImage;
-
     private void Awake()
     {
         heartImage = GetComponent<Image>();
     }
-
     public void SetHeartImage(HeartStatus status)
     {
         switch (status)
@@ -38,3 +35,6 @@ public enum HeartStatus
     Half = 1,
     Full = 2
 }
+
+
+
