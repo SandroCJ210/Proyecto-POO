@@ -10,6 +10,7 @@ TagManager:
   - BDU
   - BDR
   - BDL
+  - Bullet
   layers:
   - Default
   - TransparentFX
