@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    private Camera gameCamera;
+    public Camera gameCamera;
     private Player player;
     private static float lerpDuration;
     private Vector3 gameCameraVector;
@@ -17,6 +17,7 @@ public class Door : MonoBehaviour
         player = FindAnyObjectByType<Player>();
         float gameCameraHeight = 2 * gameCamera.orthographicSize;
         float gameCameraWidth = gameCameraHeight * gameCamera.aspect;
+
         gameCameraVector = new Vector3(gameCameraWidth, gameCameraHeight, gameCamera.transform.position.z);
         lerpDuration = 0.5f;
         curve = new AnimationCurve(new Keyframe(0, 0), new Keyframe(1, 1));
@@ -25,20 +26,20 @@ public class Door : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Player" && player.InputVector.magnitude != Mathf.Sqrt(2))
+        if (col.tag == "Player")
         {
             MovePlayerToRoom();
             Vector3 actualCamPosition = gameCamera.transform.position;
-            Vector3 targetCamPosition = actualCamPosition + Vector3.Scale(player.InputVector, gameCameraVector);
+            Vector3 targetCamPosition = actualCamPosition + Vector3.Scale(player.directionToMove, gameCameraVector);
             StartCoroutine(MoveCamera(actualCamPosition, targetCamPosition, lerpDuration));
         }
     }
     private void MovePlayerToRoom()
     {
         Vector3 actualPlayerPosition = player.transform.position;
-        Vector3 advance = new Vector3(1.9f, 1.9f, actualPlayerPosition.z);
-        Vector3 targetPosition = actualPlayerPosition + Vector3.Scale(player.InputVector, advance);
-        player.transform.position = targetPosition;
+        Vector3 advance = new Vector3(1.4f, 1.4f, actualPlayerPosition.z);
+        Vector3 targetPosition = actualPlayerPosition + Vector3.Scale(player.directionToMove, advance);
+        player.transform.position = targetPosition;        
     }
     private IEnumerator MoveCamera(Vector3 start, Vector3 target, float lerpDuration)
     {

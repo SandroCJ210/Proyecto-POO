@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Door
   - Enemy
+  - BDD
+  - BDU
+  - BDR
+  - BDL
   layers:
   - Default
   - TransparentFX
