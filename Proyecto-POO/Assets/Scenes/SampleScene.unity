@@ -1868,7 +1868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670310266988254509, guid: e123d2d6b0b180b4a9301cc772aabc4a, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9374,7 +9374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670310266988254509, guid: e123d2d6b0b180b4a9301cc772aabc4a, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14440,7 +14440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670310266988254509, guid: e123d2d6b0b180b4a9301cc772aabc4a, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20763,10 +20763,6 @@ PrefabInstance:
     - target: {fileID: 2925108021998864598, guid: e123d2d6b0b180b4a9301cc772aabc4a, type: 3}
       propertyPath: m_Name
       value: fuego_azul
-      objectReference: {fileID: 0}
-    - target: {fileID: 4670310266988254509, guid: e123d2d6b0b180b4a9301cc772aabc4a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

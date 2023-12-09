@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
         if (health > 0)
         {
             health -= 1;
-            if(health < 0)
+            if(health <= 0)
             {
                 SceneManager.LoadScene(0);
             }
