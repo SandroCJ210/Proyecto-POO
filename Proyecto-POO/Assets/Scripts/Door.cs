@@ -13,6 +13,7 @@ public class Door : MonoBehaviour
 
     void Start()
     {
+        gameCamera = Camera.main;
         player = FindAnyObjectByType<Player>();
         float gameCameraHeight = 2 * gameCamera.orthographicSize;
         float gameCameraWidth = gameCameraHeight * gameCamera.aspect;
@@ -36,7 +37,7 @@ public class Door : MonoBehaviour
     private void MovePlayerToRoom()
     {
         Vector3 actualPlayerPosition = player.transform.position;
-        Vector3 advance = new Vector3(1.1f, 1.1f, actualPlayerPosition.z);
+        Vector3 advance = new Vector3(1.4f, 1.4f, actualPlayerPosition.z);
         Vector3 targetPosition = actualPlayerPosition + Vector3.Scale(player.directionToMove, advance);
         player.transform.position = targetPosition;        
     }
