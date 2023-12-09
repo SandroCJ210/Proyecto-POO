@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 4307876}
   - component: {fileID: 4307877}
   - component: {fileID: 4307878}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,7 +897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 29247428}
   - component: {fileID: 29247429}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1065,7 +1065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30804715}
   - component: {fileID: 30804716}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Objeto_Moneda_de_Madera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1605,7 +1605,7 @@ GameObject:
   - component: {fileID: 187756583}
   - component: {fileID: 187756584}
   - component: {fileID: 187756585}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2025,7 +2025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228498285}
   - component: {fileID: 228498286}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2687,7 +2687,7 @@ GameObject:
   - component: {fileID: 337638781}
   - component: {fileID: 337638782}
   - component: {fileID: 337638783}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2992,7 +2992,7 @@ GameObject:
   - component: {fileID: 362011178}
   - component: {fileID: 362011179}
   - component: {fileID: 362011180}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3122,7 +3122,7 @@ GameObject:
   - component: {fileID: 367890750}
   - component: {fileID: 367890751}
   - component: {fileID: 367890752}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3411,7 +3411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 397831762}
   - component: {fileID: 397831761}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: peluche_azul_baby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3625,7 +3625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 406860994}
   - component: {fileID: 406860995}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_21 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3783,7 +3783,7 @@ GameObject:
   - component: {fileID: 427027157}
   - component: {fileID: 427027158}
   - component: {fileID: 427027159}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_17 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4043,7 +4043,7 @@ GameObject:
   - component: {fileID: 431748431}
   - component: {fileID: 431748432}
   - component: {fileID: 431748433}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4172,7 +4172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 434424532}
   - component: {fileID: 434424533}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_21 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6888,7 +6888,7 @@ GameObject:
   - component: {fileID: 474545006}
   - component: {fileID: 474545007}
   - component: {fileID: 474545008}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7193,7 +7193,7 @@ GameObject:
   - component: {fileID: 493142277}
   - component: {fileID: 493142278}
   - component: {fileID: 493142279}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_21 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8180,7 +8180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 612630294}
   - component: {fileID: 612630295}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8356,7 +8356,7 @@ GameObject:
   - component: {fileID: 629749498}
   - component: {fileID: 629749499}
   - component: {fileID: 629749500}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_21 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8714,7 +8714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 659987753}
   - component: {fileID: 659987754}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9257,7 +9257,7 @@ GameObject:
   - component: {fileID: 754488654}
   - component: {fileID: 754488655}
   - component: {fileID: 754488656}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_21 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10268,7 +10268,7 @@ GameObject:
   - component: {fileID: 843011204}
   - component: {fileID: 843011205}
   - component: {fileID: 843011206}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10397,7 +10397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 853725078}
   - component: {fileID: 853725079}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10481,7 +10481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 861992817}
   - component: {fileID: 861992818}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10661,7 +10661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 895271502}
   - component: {fileID: 895271503}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10746,7 +10746,7 @@ GameObject:
   - component: {fileID: 898123687}
   - component: {fileID: 898123688}
   - component: {fileID: 898123689}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10909,7 +10909,7 @@ GameObject:
   - component: {fileID: 911637334}
   - component: {fileID: 911637335}
   - component: {fileID: 911637336}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_17 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11122,7 +11122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 935242799}
   - component: {fileID: 935242800}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11371,7 +11371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 952921030}
   - component: {fileID: 952921031}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11489,7 +11489,7 @@ GameObject:
   - component: {fileID: 980682731}
   - component: {fileID: 980682732}
   - component: {fileID: 980682733}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: oso_peluche
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11679,7 +11679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 987508315}
   - component: {fileID: 987508316}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12491,7 +12491,7 @@ GameObject:
   - component: {fileID: 1089383207}
   - component: {fileID: 1089383208}
   - component: {fileID: 1089383209}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12625,7 +12625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1120722683}
   - component: {fileID: 1120722684}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13787,7 +13787,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213362596}
   - component: {fileID: 1213362597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14072,7 +14072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1281830021}
   - component: {fileID: 1281830022}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_21 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14240,7 +14240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1315019436}
   - component: {fileID: 1315019437}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_21 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14455,7 +14455,7 @@ GameObject:
   - component: {fileID: 1316319385}
   - component: {fileID: 1316319386}
   - component: {fileID: 1316319387}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14584,7 +14584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1330938616}
   - component: {fileID: 1330938617}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14668,7 +14668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1350381164}
   - component: {fileID: 1350381165}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14753,7 +14753,7 @@ GameObject:
   - component: {fileID: 1365383844}
   - component: {fileID: 1365383845}
   - component: {fileID: 1365383846}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15277,7 +15277,7 @@ GameObject:
   - component: {fileID: 1383119362}
   - component: {fileID: 1383119363}
   - component: {fileID: 1383119364}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15407,7 +15407,7 @@ GameObject:
   - component: {fileID: 1396778925}
   - component: {fileID: 1396778926}
   - component: {fileID: 1396778927}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15672,7 +15672,7 @@ GameObject:
   - component: {fileID: 1411065378}
   - component: {fileID: 1411065379}
   - component: {fileID: 1411065380}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15970,7 +15970,7 @@ GameObject:
   - component: {fileID: 1444734008}
   - component: {fileID: 1444734009}
   - component: {fileID: 1444734010}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_17 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16217,7 +16217,7 @@ GameObject:
   - component: {fileID: 1496936693}
   - component: {fileID: 1496936694}
   - component: {fileID: 1496936695}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16346,7 +16346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1519970265}
   - component: {fileID: 1519970266}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16465,7 +16465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1528325964}
   - component: {fileID: 1528325965}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16549,7 +16549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1537046394}
   - component: {fileID: 1537046393}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: grid_poop_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16940,7 +16940,7 @@ GameObject:
   - component: {fileID: 1567952787}
   - component: {fileID: 1567952788}
   - component: {fileID: 1567952789}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18039,7 +18039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1673082647}
   - component: {fileID: 1673082648}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18375,7 +18375,7 @@ GameObject:
   - component: {fileID: 1692368205}
   - component: {fileID: 1692368206}
   - component: {fileID: 1692368207}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_21 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18504,7 +18504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1700938171}
   - component: {fileID: 1700938172}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18589,7 +18589,7 @@ GameObject:
   - component: {fileID: 1710489489}
   - component: {fileID: 1710489490}
   - component: {fileID: 1710489491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19634,7 +19634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1767024177}
   - component: {fileID: 1767024178}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19837,7 +19837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1837028178}
   - component: {fileID: 1837028179}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20447,7 +20447,7 @@ GameObject:
   - component: {fileID: 1910405977}
   - component: {fileID: 1910405978}
   - component: {fileID: 1910405979}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_21 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20577,7 +20577,7 @@ GameObject:
   - component: {fileID: 1936377226}
   - component: {fileID: 1936377227}
   - component: {fileID: 1936377228}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_17 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20706,7 +20706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1956645879}
   - component: {fileID: 1956645880}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Objeto_Moneda_de_Madera (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20790,7 +20790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1966479849}
   - component: {fileID: 1966479850}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_21 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21204,7 +21204,7 @@ GameObject:
   - component: {fileID: 2029785948}
   - component: {fileID: 2029785949}
   - component: {fileID: 2029785950}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_17 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21334,7 +21334,7 @@ GameObject:
   - component: {fileID: 2036115917}
   - component: {fileID: 2036115918}
   - component: {fileID: 2036115919}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21464,7 +21464,7 @@ GameObject:
   - component: {fileID: 2045043600}
   - component: {fileID: 2045043601}
   - component: {fileID: 2045043602}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_21 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21797,7 +21797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2060887969}
   - component: {fileID: 2060887970}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22308,7 +22308,7 @@ GameObject:
   - component: {fileID: 2127325683}
   - component: {fileID: 2127325684}
   - component: {fileID: 2127325685}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22567,7 +22567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2139577680}
   - component: {fileID: 2139577681}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: rocks_catacombs_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22655,11 +22655,11 @@ PrefabInstance:
       objectReference: {fileID: 2056039631}
     - target: {fileID: 7399565916253996918, guid: a91949b0c03cc2b44bc913f2e0d3d765, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.80764
+      value: 92.32
       objectReference: {fileID: 0}
     - target: {fileID: 7399565916253996918, guid: a91949b0c03cc2b44bc913f2e0d3d765, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.0307207
+      value: 6.51
       objectReference: {fileID: 0}
     - target: {fileID: 7399565916253996918, guid: a91949b0c03cc2b44bc913f2e0d3d765, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22697,6 +22697,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemigos
       objectReference: {fileID: 0}
+    - target: {fileID: 8541524124208114886, guid: a91949b0c03cc2b44bc913f2e0d3d765, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960105715311910006, guid: a91949b0c03cc2b44bc913f2e0d3d765, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1989846723, guid: 39001d6fc4c5f9c4cb26dbeef6325dc9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
