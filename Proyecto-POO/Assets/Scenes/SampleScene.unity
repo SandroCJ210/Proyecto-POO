@@ -13229,8 +13229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f265f1f6f6a8f469d3ba2536d421d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
-  timeBetweenShots: 0
+  bulletPrefab: {fileID: 6128602124549691067, guid: 34d8e5374c673134f86f1b4deea8c1e7, type: 3}
+  timeBetweenShots: 0.4
   player: {fileID: 710525710}
 --- !u!1 &1383119361
 GameObject:
