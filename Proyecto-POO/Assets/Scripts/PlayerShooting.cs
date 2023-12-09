@@ -12,6 +12,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField]
     private Player player;
     private Animator an;
+    private AudioSource audioSource;
     private float xAxis;
     private float yAxis;
     [HideInInspector]
@@ -23,6 +24,7 @@ public class PlayerShooting : MonoBehaviour
     void Start()
     {
         an = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -54,15 +56,9 @@ public class PlayerShooting : MonoBehaviour
         {
             if (Time.time > nextTimetoShoot)
             {
+                audioSource.Play();
                 nextTimetoShoot = Time.time + timeBetweenShots;
-                if (shootVector.y == -1) 
-                {
-                    Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-                }
-                else
-                {
-                    Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-                }
+                Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             }
         }
     }
