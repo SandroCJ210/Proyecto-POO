@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private float xAxis;
     private float yAxis;
+    public AudioSource audiosource;
     private Vector2 movementVector;
     public Vector2 InputVector { get; private set; }
     private Vector2 smoothVelocity;
@@ -74,6 +75,7 @@ public class Player : MonoBehaviour
         if (health > 0)
         {
             health -= 1;
+            audiosource.Play();
             if(health <= 0)
             {
                 SceneManager.LoadScene(0);
