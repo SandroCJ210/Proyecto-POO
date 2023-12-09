@@ -6,7 +6,6 @@ using static UnityEngine.GraphicsBuffer;
 
 public class EnemyShortMeleeAI : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Transform target;
 
     public float speed = 200f;
@@ -40,7 +39,6 @@ public class EnemyShortMeleeAI : MonoBehaviour
             currentWaypoint = 0;
         }
     }
-    // Update is called once per frame
     void Update()
     {
         if(path == null)

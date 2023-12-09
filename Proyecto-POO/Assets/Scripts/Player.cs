@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    #region Shooting Mechanic
-    [Header("Shooting Mechanic")]
-    [SerializeField]
-    private Transform firePivot;
-    [SerializeField]
-    private GameObject bulletPrefab;
-    
-    
-    #endregion
     #region Movement and Physics
     [Header("Movement and Physics")]
     [SerializeField]
@@ -23,39 +14,42 @@ public class Player : MonoBehaviour
     private float xAxis;
     private float yAxis;
     private Vector2 movementVector;
-    public Vector2 inputVector;
+    public Vector2 InputVector { get; private set; }
     private Vector2 smoothVelocity;
     #endregion
     #region State Variables
+    public HealthHeartBar healthHeartBar;
+    private float health, maxHealth;
     public bool isWalking;
     #endregion
     #region Events
-    void Start()
+    private void Start()
     {
+        maxHealth = 6;
+        health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
     }
     private void Update()
     {
         GetInput();
-        Shoot();
     }
     void FixedUpdate()
     {
-        movementVector = Vector2.SmoothDamp(movementVector, inputVector.normalized, ref smoothVelocity, timeToStop);
+        movementVector = Vector2.SmoothDamp(movementVector, InputVector, ref smoothVelocity, timeToStop);
         Move();
     }
     #endregion
     #region Functions
-    void GetInput()
+    private void GetInput()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
         
-        inputVector = new Vector2(xAxis, yAxis);
+        InputVector = new Vector2(xAxis, yAxis).normalized;
     }
-    void Move()
+    private void Move()
     {
-        rb.velocity = new Vector2(movementVector.x, movementVector.y) * speed;
+        rb.velocity = new Vector2(movementVector.x,movementVector.y) * speed;
         if (rb.velocity.magnitude < 1)
         {
             isWalking = false;
@@ -66,12 +60,32 @@ public class Player : MonoBehaviour
             isWalking = true;
         }
     }
-    void Shoot()
+    public float GetHealth()
     {
-        if (Input.GetMouseButtonDown(0))
+        return health;
+    }
+    public float GetMaxHealth()
+    {
+        return maxHealth;
+    }
+    public void TakeDamage()
+    {
+        if (health > 0)
         {
-            
-                Instantiate(bulletPrefab, firePivot.position, firePivot.rotation);
+            health -= 1;
+            if(health < 0)
+            {
+                //GameOverScreen and reload level
+            }
+            healthHeartBar.DrawHearts();
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Enemy")
+        {
+            TakeDamage();
+            healthHeartBar.DrawHearts();
         }
     }
     #endregion

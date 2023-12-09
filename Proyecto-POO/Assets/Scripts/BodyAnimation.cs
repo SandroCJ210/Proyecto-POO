@@ -7,14 +7,14 @@ public class BodyAnimation : MonoBehaviour
     [SerializeField]
     private Player player;
     private Animator an;
-    void Start()
+    private void Start()
     {
         an = GetComponent<Animator>();
     }
     private void LateUpdate()
     {
-        an.SetFloat("Horizontal", player.inputVector.x);
-        an.SetFloat("Vertical", player.inputVector.y);
-        an.SetFloat("Speed", player.inputVector.sqrMagnitude);
+        an.SetFloat("Horizontal", player.InputVector.x);
+        an.SetFloat("Vertical", player.InputVector.y);
+        an.SetFloat("Speed", player.InputVector.sqrMagnitude);
     }
 }

@@ -8,20 +8,48 @@ public class Bullet : MonoBehaviour
     private float bulletSpeed;
     [SerializeField]
     private float timeToDestroy;
+    [SerializeField]
+    private GameObject impactEffect;
+    [SerializeField]
+    private PlayerShooting pS;
+    private Vector2 direction;
     private Rigidbody2D rb;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        pS = FindObjectOfType<PlayerShooting>();
         StartCoroutine(WaitThenDestroy());
+        direction = pS.ShootVector;
     }
 
     private void FixedUpdate()
     {
-        transform.Translate(Vector3.up * bulletSpeed);
+        rb.velocity = direction * bulletSpeed;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.transform.CompareTag("Player"))
+        {
+            if (collision.transform.CompareTag("Enemy"))
+            {
+                Destroy(collision.gameObject);
+            }
+            rb.velocity = Vector2.zero;
+            DestroyTear();
+        }
+    }
+
     IEnumerator WaitThenDestroy()
     {
         yield return new WaitForSeconds(timeToDestroy);
-        Destroy(gameObject);
+        DestroyTear();
     }
+    void DestroyTear()
+    {
+        GameObject effect = Instantiate(impactEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 3f);
+        Destroy(this.gameObject);
+    }
+    
 }
